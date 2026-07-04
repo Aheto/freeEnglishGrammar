@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="English Grammar - Parts of Speech, Simple Present Tense & Verb 'To Be'. Master verb functions, conjugations, and sentence formation with comprehensive lesson plans.">
+<title>English Grammar | Parts of Speech & Simple Present Tense - Mini OpenStax</title>
+
+<!-- Google Fonts: Inter & Playfair Display via media="print" onload trick -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet"></noscript>
+
+<!-- Font Awesome 6.4.0 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+:root {
+  --green: #006b3d;
+  --green-dark: #00502e;
+  --green-light: #e8f5ee;
+  --gold: #cead00;
+  --gold-light: #fdf6d8;
+  --red: #ce1126;
+  --red-light: #fde8ea;
+  --light: #f9f9f9;
+  --dark: #2d2d2d;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --text: #1a202c;
+  --text-muted: #64748b;
+  --focus-ring: 0 0 0 3px rgba(0, 107, 61, 0.25);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.15);
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --max-w: 800px;
+  --max-w-wide: 1200px;
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --light: #0f1419;
+    --dark: #f5f5f5;
+    --surface: #1a202c;
+    --border: #2d3748;
+    --text: #f1f5f9;
+    --text-muted: #94a3b8;
+    --green-light: #0a2e1d;
+    --gold-light: #3d3400;
+    --red-light: #3d0a10;
+  }
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; line-height: 1.2; color: var(--text); }
+
+a { color: var(--green); text-decoration: none; transition: color var(--transition); }
+a:hover { color: var(--green-dark); }
+a:focus-visible { outline: none; box-shadow: var(--focus-ring); border-radius: var(--radius-sm); }
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: var(--space-md);
+  background: var(--green);
+  color: white;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  z-index: 1000;
+  transition: top var(--transition);
+}
+.skip-link:focus { top: var(--space-md); }
+
+/* HEADER */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+@media (prefers-color-scheme: dark) {
+  .site-header { background: rgba(26, 32, 44, 0.85); }
+}
+
+.header-inner {
+  max-width: var(--max-w-wide);
+  margin: 0 auto;
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--green);
+}
+.brand svg { flex-shrink: 0; }
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-xs) var(--space-sm);
+  cursor: pointer;
+  color: var(--text);
+  transition: all var(--transition);
+}
+.nav-toggle:hover { background: var(--green-light); border-color: var(--green); }
+.nav-toggle:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: var(--space-xs);
+  align-items: center;
+}
+.nav-list a {
+  display: block;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text);
+  transition: all var(--transition);
+}
+.nav-list a:hover { background: var(--green-light); color: var(--green); }
+.nav-list a[aria-current="page"] {
+  background: var(--green);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle { display: flex; align-items: center; gap: var(--space-xs); }
+  .nav-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: var(--space-md);
+    gap: var(--space-xs);
+    box-shadow: var(--shadow-md);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--transition);
+  }
+  .nav-list.is-open {
+    max-height: 500px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav-list a { width: 100%; padding: var(--space-sm) var(--space-md); }
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+  color: white;
+  padding: var(--space-3xl) var(--space-lg);
+  text-align: center;
+  border-bottom: 4px solid var(--gold);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 20% 50%, rgba(206, 173, 0, 0.15) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 80%, rgba(206, 17, 38, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero-inner { max-width: var(--max-w-wide); margin: 0 auto; position: relative; z-index: 1; }
+.hero h1 {
+  color: white;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  margin-bottom: var(--space-sm);
+  font-weight: 800;
+}
+.hero .subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  opacity: 0.95;
+  margin-bottom: var(--space-md);
+  font-weight: 500;
+}
+.hero .indicator {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--dark);
+  padding: var(--space-xs) var(--space-lg);
+  border-radius: var(--radius-xl);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-md);
+}
+
+/* MAIN */
+main {
+  max-width: var(--max-w-wide);
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-lg);
+  width: 100%;
+  flex: 1;
+}
+
+.section { margin-bottom: var(--space-3xl); }
+.section-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: var(--space-md);
+  color: var(--green-dark);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+.section-title::before {
+  content: '';
+  width: 5px;
+  height: 1.5em;
+  background: linear-gradient(180deg, var(--green), var(--gold));
+  border-radius: 3px;
+}
+.section-subtitle {
+  color: var(--text-muted);
+  margin-bottom: var(--space-xl);
+  font-size: 1.05rem;
+}
+
+/* OBJECTIVE CARDS */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+
+.objective-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.objective-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--green), var(--gold), var(--red));
+}
+.objective-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--green);
+}
+.objective-card .card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+.objective-card .card-num {
+  background: var(--green-light);
+  color: var(--green-dark);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.objective-card .indicator-tag {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+.objective-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-xs);
+  color: var(--green-dark);
+}
+.objective-card .strand {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px dashed var(--border);
+}
+.objective-card .strand strong { color: var(--text); }
+.objective-card h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--green);
+  margin-bottom: var(--space-sm);
+  font-weight: 700;
+}
+.objective-card ul {
+  list-style: none;
+  margin-bottom: var(--space-md);
+}
+.objective-card ul li {
+  padding: var(--space-xs) 0;
+  padding-left: 1.75rem;
+  position: relative;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+.objective-card ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-weight: 700;
+  font-size: 1rem;
+}
+.objective-card .meta {
+  background: var(--light);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-sm);
+  font-size: 0.85rem;
+}
+.objective-card .meta strong { color: var(--green-dark); display: block; margin-bottom: 2px; }
+.objective-card .keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
+}
+.objective-card .keywords span {
+  background: var(--gold-light);
+  color: var(--dark);
+  padding: 2px 10px;
+  border-radius: var(--radius-xl);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid var(--gold);
+}
+
+/* LESSON GRIDS (TABLES) */
+.grid-section { margin-bottom: var(--space-2xl); }
+.grid-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  margin-bottom: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--green-light);
+  border-left: 4px solid var(--green);
+  border-radius: var(--radius-sm);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+  font-size: 0.9rem;
+}
+.data-table thead {
+  background: linear-gradient(135deg, var(--green-dark), var(--green));
+  color: white;
+}
+.data-table th {
+  padding: var(--space-md);
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--gold);
+}
+.data-table td {
+  padding: var(--space-md);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.data-table tbody tr { transition: background var(--transition); }
+.data-table tbody tr:hover { background: var(--green-light); }
+.data-table tbody tr:last-child td { border-bottom: none; }
+.data-table td:first-child {
+  font-weight: 700;
+  color: var(--green-dark);
+  text-align: center;
+  background: var(--light);
+  width: 60px;
+}
+.data-table td ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.data-table td ul li {
+  padding: 2px 0 2px 1.25rem;
+  position: relative;
+  font-size: 0.85rem;
+}
+.data-table td ul li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* STRATEGY CARDS */
+.strategy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+.strategy-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+}
+.strategy-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+.strategy-card.struggling h3 { color: var(--red); }
+.strategy-card.advanced h3 { color: var(--green); }
+.strategy-card ul {
+  list-style: none;
+}
+.strategy-card ul li {
+  padding: var(--space-xs) 0 var(--space-xs) 1.75rem;
+  position: relative;
+  font-size: 0.95rem;
+}
+.strategy-card.struggling ul li::before {
+  content: '🎯';
+  position: absolute;
+  left: 0;
+}
+.strategy-card.advanced ul li::before {
+  content: '🚀';
+  position: absolute;
+  left: 0;
+}
+
+/* CROSS-CURRICULAR */
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-md);
+}
+.link-chip {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  transition: all var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+.link-chip:hover {
+  transform: translateX(4px);
+  border-left-color: var(--green);
+  box-shadow: var(--shadow-md);
+  color: var(--green-dark);
+}
+.link-chip i { color: var(--gold); font-size: 1.25rem; }
+
+/* PROGRESS CARD */
+.progress-card {
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+  color: white;
+  padding: var(--space-2xl);
+  border-radius: var(--radius-xl);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+.progress-card::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -20%;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(206, 173, 0, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.progress-card h2 {
+  color: white;
+  font-size: 1.75rem;
+  margin-bottom: var(--space-md);
+  position: relative;
+}
+.progress-card p {
+  font-size: 1.05rem;
+  margin-bottom: var(--space-sm);
+  position: relative;
+}
+.progress-card .subtext {
+  opacity: 0.85;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+/* FOOTER */
+.site-footer {
+  background: var(--dark);
+  color: #cbd5e0;
+  padding: var(--space-3xl) var(--space-lg) var(--space-lg);
+  margin-top: auto;
+}
+@media (prefers-color-scheme: dark) {
+  .site-footer { background: #0a0e14; }
+}
+.footer-inner {
+  max-width: var(--max-w-wide);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-col h4 {
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  margin-bottom: var(--space-md);
+}
+.footer-col p { font-size: 0.9rem; line-height: 1.7; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: var(--space-xs); }
+.footer-col ul li a {
+  color: #cbd5e0;
+  font-size: 0.9rem;
+  transition: color var(--transition);
+}
+.footer-col ul li a:hover { color: var(--gold); }
+.footer-col .contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  font-size: 0.9rem;
+}
+.footer-col .contact-item i {
+  color: var(--gold);
+  margin-top: 3px;
+  width: 16px;
+}
+.footer-bottom {
+  max-width: var(--max-w-wide);
+  margin: var(--space-lg) auto 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+.footer-bottom p { margin-bottom: var(--space-xs); }
+.footer-bottom a { color: var(--gold); }
+.footer-bottom .nacca {
+  display: inline-block;
+  background: rgba(206, 173, 0, 0.15);
+  color: var(--gold);
+  padding: 2px 10px;
+  border-radius: var(--radius-xl);
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: var(--space-xs);
+}
+
+/* UTILITIES */
+@media (max-width: 640px) {
+  main { padding: var(--space-xl) var(--space-md); }
+  .hero { padding: var(--space-2xl) var(--space-md); }
+  .objective-card { padding: var(--space-lg); }
+  .strategy-card, .progress-card { padding: var(--space-lg); }
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand" aria-label="Mini OpenStax Home">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="#006b3d"/>
+        <path d="M8 10 L16 6 L24 10 L24 22 L16 26 L8 22 Z" fill="#cead00" opacity="0.9"/>
+        <path d="M16 6 L16 26" stroke="#fff" stroke-width="1.5"/>
+        <path d="M8 10 L16 14 L24 10" stroke="#fff" stroke-width="1.5" fill="none"/>
+      </svg>
+      <span>Mini OpenStax</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navList" aria-label="Toggle navigation menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+      <span>Menu</span>
+    </button>
+
+    <nav aria-label="Primary navigation">
+      <ul class="nav-list" id="navList">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="class3.html">Class 3</a></li>
+        <li><a href="englishChapter-0.html">English</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <h1>📖 English Grammar Mastery</h1>
+    <p class="subtitle">Parts of Speech, Simple Present Tense & Verb "To Be"</p>
+    <span class="indicator">Complete Weekly Lesson Plan</span>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main id="main-content">
+
+  <!-- LESSON OBJECTIVES -->
+  <section class="section" aria-labelledby="objectives-title">
+    <h2 class="section-title" id="objectives-title">Weekly Learning Objectives</h2>
+    <p class="section-subtitle">Master the fundamentals of English grammar through comprehensive lessons on parts of speech, verb functions, Simple Present tense usage, and the conjugation of the verb "to be" with practical exercises.</p>
+
+    <div class="card-grid">
+
+      <!-- Card 1 -->
+      <article class="objective-card">
+        <div class="card-head">
+          <span class="card-num">Day 1</span>
+          <span class="indicator-tag">Pages 25-26</span>
+        </div>
+        <h3>Parts of Speech & Verb Functions</h3>
+        <p class="strand"><strong>Topics:</strong> Nouns, Verbs, Infinitive Forms & Tenses &nbsp;|&nbsp; <strong>Focus:</strong> Understanding how words function differently in sentences</p>
+        <h4>By the end of this lesson, learners will be able to:</h4>
+        <ul>
+          <li>Distinguish between nouns and verbs based on their functions in sentences</li>
+          <li>Identify words that can perform multiple functions (e.g., "comb" as noun and verb)</li>
+          <li>Understand different verb forms depending on subject and time</li>
+          <li>Recognize Simple Present and Simple Past tenses</li>
+          <li>Identify the infinitive form of verbs (with "to") and bare infinitive</li>
+        </ul>
+        <div class="meta"><strong>Core Skills:</strong> Grammatical Analysis, Word Function Recognition, Sentence Structure</div>
+        <div class="keywords">
+          <span>Nouns</span><span>Verbs</span><span>Infinitive</span><span>Tenses</span><span>Word Functions</span>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="objective-card">
+        <div class="card-head">
+          <span class="card-num">Day 2</span>
+          <span class="indicator-tag">Page 27</span>
+        </div>
+        <h3>Uses of Simple Present Tense</h3>
+        <p class="strand"><strong>Topics:</strong> Four Primary Uses of Simple Present &nbsp;|&nbsp; <strong>Focus:</strong> When and how to use Simple Present correctly</p>
+        <h4>By the end of this lesson, learners will be able to:</h4>
+        <ul>
+          <li>Use Simple Present to describe actions at regular intervals</li>
+          <li>State general truths and facts using Simple Present</li>
+          <li>Refer to printed material and describe events in books/films</li>
+          <li>Express future or past events using Simple Present (special cases)</li>
+          <li>Differentiate between the four main uses through practical examples</li>
+        </ul>
+        <div class="meta"><strong>Core Skills:</strong> Tense Application, Context Recognition, Practical Usage</div>
+        <div class="keywords">
+          <span>Regular Intervals</span><span>General Truths</span><span>Printed Material</span><span>Future/Past Events</span>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="objective-card">
+        <div class="card-head">
+          <span class="card-num">Day 3</span>
+          <span class="indicator-tag">Page 28</span>
+        </div>
+        <h3>Verb "To Be" - Conjugation & Forms</h3>
+        <p class="strand"><strong>Topics:</strong> Affirmative Statements, Questions, Negatives &nbsp;|&nbsp; <strong>Focus:</strong> Complete conjugation and sentence formation</p>
+        <h4>By the end of this lesson, learners will be able to:</h4>
+        <ul>
+          <li>Conjugate the verb "to be" in Simple Present (full forms and contractions)</li>
+          <li>Form affirmative statements with correct word order</li>
+          <li>Create questions by reversing subject and verb order</li>
+          <li>Construct negative statements using "not"</li>
+          <li>Form negative questions correctly</li>
+        </ul>
+        <div class="meta"><strong>Core Skills:</strong> Verb Conjugation, Sentence Formation, Question Structure</div>
+        <div class="keywords">
+          <span>Conjugation</span><span>Affirmative</span><span>Questions</span><span>Negative</span><span>Word Order</span>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="objective-card">
+        <div class="card-head">
+          <span class="card-num">Days 4-5</span>
+          <span class="indicator-tag">Pages 28-32</span>
+        </div>
+        <h3>Contractions, Tag Questions & Practice</h3>
+        <p class="strand"><strong>Topics:</strong> Contractions, Tag Questions, Sentence Formation Exercises &nbsp;|&nbsp; <strong>Focus:</strong> Advanced usage and practical application</p>
+        <h4>By the end of these lessons, learners will be able to:</h4>
+        <ul>
+          <li>Use contractions correctly in spoken and informal English</li>
+          <li>Understand the special rule for "I am not" (aren't I vs. formal usage)</li>
+          <li>Form and use tag questions appropriately</li>
+          <li>Apply proper word order in sentence formation exercises</li>
+          <li>Construct grammatically correct statements and questions from jumbled words</li>
+        </ul>
+        <div class="meta"><strong>Core Skills:</strong> Informal Speech, Tag Questions, Word Order, Practical Application</div>
+        <div class="keywords">
+          <span>Contractions</span><span>Tag Questions</span><span>Word Order</span><span>Formal/Informal</span><span>Exercises</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- LESSON GRIDS -->
+  <section class="section" aria-labelledby="grids-title">
+    <h2 class="section-title" id="grids-title">Detailed Lesson Plans</h2>
+    <p class="section-subtitle">A comprehensive 5-day breakdown covering all grammar concepts from the provided materials, including exercises and assessments.</p>
+
+    <!-- GRID 1 -->
+    <div class="grid-section">
+      <h3 class="grid-title"><i class="fa-solid fa-book-open"></i> &nbsp;Day 1 — Parts of Speech & Verb Functions</h3>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Topic</th>
+              <th>Duration</th>
+              <th>Learning Objectives</th>
+              <th>Teacher Activities</th>
+              <th>Resources</th>
+              <th>Assessment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Functions of Words</td>
+              <td>40 min</td>
+              <td><ul><li>Understand nouns vs. verbs</li><li>Recognize dual-function words</li></ul></td>
+              <td><ul><li>Explain how words perform different functions</li><li>Show examples: "I have lost my comb" (noun) vs. "I comb my hair" (verb)</li><li>Demonstrate: "Water is necessity" vs. "Do you water plants?"</li></ul></td>
+              <td>Word cards, example sentences, whiteboard</td>
+              <td><ul><li>Identify word functions in given sentences</li><li>Create pairs of sentences showing noun/verb usage</li></ul></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Verb Forms & Tenses</td>
+              <td>40 min</td>
+              <td><ul><li>Understand verb conjugation</li><li>Distinguish Simple Present vs. Past</li></ul></td>
+              <td><ul><li>Explain how verb forms change with subject and time</li><li>Compare: "He always walks" (Present) vs. "He walked yesterday" (Past)</li><li>Introduce concept of tenses indicating when actions occur</li></ul></td>
+              <td>Verb charts, timeline visuals</td>
+              <td><ul><li>Identify tense in sample sentences</li><li>Convert present to past tense verbs</li></ul></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Infinitive Forms</td>
+              <td>40 min</td>
+              <td><ul><li>Recognize infinitive with "to"</li><li>Understand bare infinitive</li></ul></td>
+              <td><ul><li>Explain infinitive form begins with "to" (e.g., "to walk")</li><li>Define bare infinitive (without "to")</li><li>Show dictionary listings use bare infinitive</li></ul></td>
+              <td>Dictionaries, verb lists</td>
+              <td><ul><li>Identify infinitive forms in text</li><li>Convert between infinitive and bare infinitive</li></ul></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- GRID 2 -->
+    <div class="grid-section">
+      <h3 class="grid-title"><i class="fa-solid fa-clock"></i> &nbsp;Day 2 — Four Uses of Simple Present Tense</h3>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Topic</th>
+              <th>Duration</th>
+              <th>Learning Objectives</th>
+              <th>Teacher Activities</th>
+              <th>Resources</th>
+              <th>Assessment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Regular Intervals</td>
+              <td>35 min</td>
+              <td><ul><li>Use Simple Present for habitual actions</li></ul></td>
+              <td><ul><li>Explain actions at regular intervals</li><li>Examples: "We visit friends every Sunday", "Geese fly south every fall"</li><li>Practice with time expressions (every, once a week, etc.)</li></ul></td>
+              <td>Calendar visuals, habit charts</td>
+              <td><ul><li>Write sentences about personal routines</li><li>Identify time expressions in sentences</li></ul></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>General Truths</td>
+              <td>35 min</td>
+              <td><ul><li>State facts using Simple Present</li></ul></td>
+              <td><ul><li>Explain use for general truths/facts</li><li>Examples: "Water expands when heated", "Canada lies north of US"</li><li>Practice with scientific and geographical facts</li></ul></td>
+              <td>Fact cards, encyclopedia excerpts</td>
+              <td><ul><li>Write three general truth statements</li><li>Correct tense usage in fact statements</li></ul></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Printed Material & Special Uses</td>
+              <td>40 min</td>
+              <td><ul><li>Use Simple Present for books/films</li><li>Express future/past in special cases</li></ul></td>
+              <td><ul><li>Show use in referring to printed material: "The report presents..."</li><li>Demonstrate describing films: "At the end, the hero finds..."</li><li>Explain future use: "Our plane leaves at eight tomorrow"</li><li>Show newspaper headline style for past events</li></ul></td>
+              <td>Book excerpts, film reviews, newspaper headlines</td>
+              <td><ul><li>Describe a book/film plot using Simple Present</li><li>Write future schedule using Simple Present</li></ul></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- GRID 3 -->
+    <div class="grid-section">
+      <h3 class="grid-title"><i class="fa-solid fa-pen-fancy"></i> &nbsp;Day 3 — Verb "To Be" Complete Conjugation</h3>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Topic</th>
+              <th>Duration</th>
+              <th>Learning Objectives</th>
+              <th>Teacher Activities</th>
+              <th>Resources</th>
+              <th>Assessment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Conjugation & Full Forms</td>
+              <td>40 min</td>
+              <td><ul><li>Memorize all forms of "to be"</li><li>Use contractions correctly</li></ul></td>
+              <td><ul><li>Present conjugation chart: I am, You are, He/She/It is, We are, They are</li><li>Teach contractions: I'm, You're, He's, She's, It's, We're, They're</li><li>Note: Modern English uses same forms for "it" (singular/plural)</li></ul></td>
+              <td>Conjugation charts, pronoun cards</td>
+              <td><ul><li>Recite conjugation from memory</li><li>Convert full forms to contractions</li></ul></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Affirmative Statements & Questions</td>
+              <td>40 min</td>
+              <td><ul><li>Form correct affirmative statements</li><li>Create questions with word order reversal</li></ul></td>
+              <td><ul><li>Explain verb follows subject in statements: "I am awake", "They are ready"</li><li>Show questions reverse order: "Am I awake?", "Are they ready?"</li><li>Emphasize capital letters and punctuation (period vs. question mark)</li></ul></td>
+              <td>Example sentences, punctuation cards</td>
+              <td><ul><li>Convert statements to questions (Exercise 2)</li><li>Correct punctuation usage</li></ul></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Negative Forms</td>
+              <td>40 min</td>
+              <td><ul><li>Form negative statements</li><li>Create negative questions</li></ul></td>
+              <td><ul><li>Add "not" after verb for negatives: "I am not awake"</li><li>Negative questions: reverse order + "not" after subject</li><li>Examples: "Am I not awake?", "Are they not ready?"</li></ul></td>
+              <td>Negative sentence strips</td>
+              <td><ul><li>Convert affirmatives to negatives (Exercise 3)</li><li>Form negative questions (Exercise 4)</li></ul></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- GRID 4 -->
+    <div class="grid-section">
+      <h3 class="grid-title"><i class="fa-solid fa-comments"></i> &nbsp;Day 4 — Contractions & Tag Questions</h3>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Topic</th>
+              <th>Duration</th>
+              <th>Learning Objectives</th>
+              <th>Teacher Activities</th>
+              <th>Resources</th>
+              <th>Assessment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Contractions in Spoken English</td>
+              <td>40 min</td>
+              <td><ul><li>Use contractions in negative questions</li><li>Understand "isn't", "aren't" formation</li></ul></td>
+              <td><ul><li>Show contraction placement in negative questions</li><li>Examples: "Aren't you awake?", "Isn't he awake?"</li><li>Practice: "Are you not" → "Aren't you"</li></ul></td>
+              <td>Contraction charts, audio examples</td>
+              <td><ul><li>Convert formal to contracted forms</li><li>Practice spoken contractions</li></ul></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Special Rule: "I am not"</td>
+              <td>35 min</td>
+              <td><ul><li>Understand "aren't I" usage</li><li>Distinguish formal vs. informal</li></ul></td>
+              <td><ul><li>Explain no universal contraction for "I am not"</li><li>Informal: "amn't I" → "aren't I" (e.g., "Aren't I awake?")</li><li>Formal: No contraction acceptable; use "am I not"</li><li>Clarify "aren't I" not grammatically correct in formal writing</li></ul></td>
+              <td>Formal/informal comparison charts</td>
+              <td><ul><li>Identify appropriate usage contexts</li><li>Convert between formal and informal</li></ul></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Tag Questions</td>
+              <td>45 min</td>
+              <td><ul><li>Form tag questions correctly</li><li>Repeat subjects and verbs</li></ul></td>
+              <td><ul><li>Define tag questions: added at sentence end, meaning "isn't it so?"</li><li>Show pattern: repeat subject and verb from statement</li><li>Examples: "I am awake, am I not?", "You are awake, aren't you?"</li><li>Note: Use contractions except with "I" subject</li></ul></td>
+              <td>Tag question examples, Exercise 5</td>
+              <td><ul><li>Add tag questions to statements (Exercise 5)</li><li>Correct contraction usage in tags</li></ul></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- GRID 5 -->
+    <div class="grid-section">
+      <h3 class="grid-title"><i class="fa-solid fa-check-double"></i> &nbsp;Day 5 — Sentence Formation & Review</h3>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Topic</th>
+              <th>Duration</th>
+              <th>Learning Objectives</th>
+              <th>Teacher Activities</th>
+              <th>Resources</th>
+              <th>Assessment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Word Order Rules</td>
+              <td>40 min</td>
+              <td><ul><li>Apply proper word order</li><li>Form statements and questions</li></ul></td>
+              <td><ul><li>Explain word order importance</li><li>Rules: "?" symbol = question; "not" = negative</li><li>No contractions in formal sentence formation</li><li>Examples: "you, ?, excited" → "Are you excited?"</li></ul></td>
+              <td>Jumbled word cards, Exercise 6</td>
+              <td><ul><li>Form correct sentences from word groups (Exercise 6)</li><li>Apply punctuation rules correctly</li></ul></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Comprehensive Practice</td>
+              <td>50 min</td>
+              <td><ul><li>Apply all week's concepts</li><li>Complete all exercises</li></ul></td>
+              <td><ul><li>Guide students through Exercises 1-6</li><li>Review answers collectively</li><li>Address common errors and misconceptions</li><li>Provide additional practice as needed</li></ul></td>
+              <td>All exercises from pages 30-32</td>
+              <td><ul><li>Complete sentence formation tasks</li><li>Demonstrate mastery of all forms</li></ul></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Weekly Assessment</td>
+              <td>30 min</td>
+              <td><ul><li>Evaluate understanding</li><li>Identify areas for review</li></ul></td>
+              <td><ul><li>Administer comprehensive quiz</li><li>Test: conjugation, four uses of Simple Present, tag questions, formal vs. informal</li><li>Collect for grading and feedback</li></ul></td>
+              <td>Assessment worksheets</td>
+              <td><ul><li>Written assessment covering all objectives</li><li>Minimum 80% accuracy target</li></ul></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFFERENTIATION STRATEGIES -->
+  <section class="section" aria-labelledby="strategies-title">
+    <h2 class="section-title" id="strategies-title">Differentiation Strategies</h2>
+    <p class="section-subtitle">Tailored support to ensure every learner masters English grammar concepts — whether they need extra help or an extra challenge.</p>
+
+    <div class="strategy-grid">
+      <article class="strategy-card struggling">
+        <h3><i class="fa-solid fa-hand-holding-heart"></i> For Struggling Learners</h3>
+        <ul>
+          <li>Provide conjugation charts and verb tables as reference tools during exercises</li>
+          <li>Use color-coding to distinguish subjects, verbs, and objects in sentence formation</li>
+          <li>Offer sentence frames and templates for forming questions and negatives</li>
+          <li>Practice contractions through repetitive oral drills and audio examples</li>
+          <li>Break down tag questions into two steps: identify subject/verb, then add negative tag</li>
+        </ul>
+      </article>
+
+      <article class="strategy-card advanced">
+        <h3><i class="fa-solid fa-rocket"></i> For Advanced Learners</h3>
+        <ul>
+          <li>Challenge them to write paragraphs using all four uses of Simple Present tense</li>
+          <li>Introduce irregular verb patterns beyond "to be" for early exposure</li>
+          <li>Task them with creating dialogues demonstrating formal vs. informal contractions</li>
+          <li>Encourage analysis of newspaper headlines using Simple Present for past events</li>
+          <li>Have them teach tag question formation to peers as reinforcement</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- CROSS-CURRICULAR LINKS -->
+  <section class="section" aria-labelledby="links-title">
+    <h2 class="section-title" id="links-title">Cross-Curricular Links</h2>
+    <p class="section-subtitle">Connect English Grammar skills to other subjects for a richer, integrated learning experience.</p>
+
+    <div class="links-grid">
+      <div class="link-chip"><i class="fa-solid fa-book"></i> Literature</div>
+      <div class="link-chip"><i class="fa-solid fa-newspaper"></i> Media Studies</div>
+      <div class="link-chip"><i class="fa-solid fa-flask"></i> Science (General Truths)</div>
+      <div class="link-chip"><i class="fa-solid fa-globe"></i> Geography (Facts)</div>
+      <div class="link-chip"><i class="fa-solid fa-clock"></i> Social Studies (Routines)</div>
+      <div class="link-chip"><i class="fa-solid fa-pen"></i> Creative Writing</div>
+    </div>
+  </section>
+
+  <!-- PROGRESS TRACKING -->
+  <section class="section" aria-labelledby="progress-title">
+    <div class="progress-card">
+      <h2 id="progress-title">📊 Track Your Grammar Progress</h2>
+      <p>Complete all 5 days of lessons covering Parts of Speech, Simple Present Tense, Verb "To Be" conjugation, contractions, and tag questions!</p>
+      <p class="subtext">Master sentence formation and word order through comprehensive exercises and weekly assessment.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>Mini OpenStax</h4>
+      <p>Free, high-quality, and accessible educational content for learners worldwide. Comprehensive grammar lessons aligned with international standards.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="class3.html">Class 3</a></li>
+        <li><a href="englishChapter-0.html">English Lessons</a></li>
+        <li><a href="contact.html">Contact Support</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <div class="contact-item"><i class="fa-solid fa-phone"></i> <span>+233 25 732 0201</span></div>
+      <div class="contact-item"><i class="fa-solid fa-envelope"></i> <a href="mailto:learn@miniopenstax.edu.gh">learn@miniopenstax.edu.gh</a></div>
+      <div class="contact-item"><i class="fa-solid fa-location-dot"></i> <span>Accra, Ghana</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Mini OpenStax. All rights reserved.</p>
+    <p><span class="nacca">Content aligned with international grammar standards</span></p>
+    <p><a href="privacy.html">Privacy Policy</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  // Dynamic copyright year
+  var yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Mobile nav toggle
+  var toggle = document.getElementById('navToggle');
+  var navList = document.getElementById('navList');
+
+  if (toggle && navList) {
+    toggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = navList.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Click outside to close
+    document.addEventListener('click', function (e) {
+      if (!navList.contains(e.target) && !toggle.contains(e.target) && navList.classList.contains('is-open')) {
+        navList.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Escape key to close and refocus
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navList.classList.contains('is-open')) {
+        navList.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
+    });
+
+    // Close on nav link click (mobile UX)
+    navList.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (window.innerWidth <= 768) {
+          navList.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
