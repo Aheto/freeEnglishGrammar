@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Mini OpenStax: English Grammar Day 2 — Uses of the Simple Present Tense, including regular intervals, general truths, printed material, and future/past events. Over-explained notes with examples." />
+  <meta name="theme-color" content="#006b3d" />
+  <title>Mini OpenStax — English Grammar Day 2: Uses of Simple Present Tense</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* === MINI OPENSTAX DESIGN TOKENS === */
+    :root {
+      --green: #006b3d;
+      --green-dark: #00502e;
+      --gold: #cead00;
+      --red: #ce1126;
+      --light: #f9f9f9;
+      --dark: #2d2d2d;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --focus-ring: 0 0 0 3px rgb(0 107 61 / 0.4);
+      --radius-sm: 0.375rem;
+      --radius-md: 0.75rem;
+      --radius-lg: 1rem;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+      --space-xs: clamp(0.5rem, 0.8vw, 0.75rem);
+      --space-sm: clamp(0.75rem, 1.2vw, 1rem);
+      --space-md: clamp(1rem, 2vw, 1.5rem);
+      --space-lg: clamp(1.5rem, 3vw, 2.5rem);
+      --space-xl: clamp(2rem, 5vw, 4rem);
+      --max-w: 800px;
+      --transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* === RESET & BASE === */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      background: var(--surface);
+      color: var(--dark);
+      line-height: 1.6;
+      min-height: 100dvh;
+    }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+    .skip-link {
+      position: absolute; top: -40px; left: 0; background: var(--green); color: white;
+      padding: var(--space-xs) var(--space-sm); z-index: 1000; border-radius: var(--radius-sm);
+      transition: top var(--transition); font-weight: 500;
+    }
+    .skip-link:focus { top: var(--space-xs); }
+
+    /* === CONTAINER === */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: var(--space-md);
+      padding-top: calc(var(--space-md) + 72px);
+    }
+
+    /* === PROFESSIONAL HEADER (EduCore Style) === */
+    .header {
+      position: sticky; top: 0; z-index: 100;
+      background: color-mix(in srgb, var(--surface) 95%, transparent);
+      backdrop-filter: blur(12px) saturate(180%);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: var(--space-sm) var(--space-md);
+    }
+    .nav__brand {
+      font-size: 1.25rem; font-weight: 700; color: var(--green);
+      display: flex; align-items: center; gap: var(--space-xs);
+      text-decoration: none;
+    }
+    .nav__brand svg { width: 1.5rem; height: 1.5rem; stroke: var(--green); }
+    .nav__list {
+      display: none; flex-direction: column;
+      position: absolute; top: 100%; left: 0; right: 0;
+      background: var(--surface); padding: var(--space-sm);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-md); gap: var(--space-xs);
+    }
+    .nav__list.is-open { display: flex; }
+    .nav__link {
+      padding: var(--space-xs) var(--space-sm); border-radius: var(--radius-sm);
+      font-weight: 500; color: var(--dark); transition: background var(--transition), color var(--transition);
+      text-decoration: none;
+    }
+    .nav__link:hover, .nav__link:focus-visible { background: var(--light); color: var(--green); }
+    .nav__link[aria-current="page"] { color: var(--green); font-weight: 700; background: var(--light); }
+    .nav__toggle {
+      display: grid; place-items: center; width: 2.5rem; height: 2.5rem;
+      border-radius: var(--radius-sm); transition: background var(--transition);
+      background: none; border: none; cursor: pointer;
+    }
+    .nav__toggle:hover, .nav__toggle:focus-visible { background: var(--light); }
+    .nav__toggle svg { width: 1.5rem; height: 1.5rem; stroke: var(--dark); }
+    @media (min-width: 768px) {
+      .nav__toggle { display: none; }
+      .nav__list {
+        position: static; flex-direction: row; box-shadow: none; border: none; padding: 0;
+        background: transparent; display: flex; align-items: center;
+      }
+    }
+
+    /* === MINI OPENSTAX APP HEADER === */
+    .app-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: var(--space-md); flex-wrap: wrap; gap: var(--space-xs);
+      padding-bottom: var(--space-sm); border-bottom: 1px solid var(--border);
+    }
+    .app-header h1 { font-size: clamp(1.25rem, 3vw, 1.5rem); margin: 0; }
+    .lo-tags { font-size: 0.85rem; color: #64748b; font-family: var(--font-mono, monospace); }
+    .role-badge {
+      background: var(--light); padding: 0.25rem 0.5rem; border-radius: var(--radius-sm);
+      font-size: 0.85rem; font-weight: 500; color: var(--green);
+    }
+    .settings-btn {
+      background: none; border: none; font-size: 1.2rem; color: var(--green);
+      cursor: pointer; padding: 0.25rem; border-radius: var(--radius-sm);
+    }
+    .settings-btn:hover { background: var(--light); }
+
+    /* === TABS === */
+    .tabs { display: flex; gap: var(--space-sm); margin: var(--space-md) 0; flex-wrap: wrap; justify-content: center; }
+    .tab-btn {
+      padding: 0.5rem 1rem; background: var(--light); border: none; border-radius: var(--radius-md);
+      cursor: pointer; font-weight: 600; transition: background var(--transition), color var(--transition);
+    }
+    .tab-btn:hover, .tab-btn:focus-visible { background: var(--green); color: white; }
+    .tab-btn.active { background: var(--green); color: white; }
+    .tab-btn:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+
+    /* === MODAL === */
+    .modal {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center;
+      z-index: 1000; display: none;
+    }
+    .modal-content {
+      background: white; padding: var(--space-lg); border-radius: var(--radius-lg);
+      width: 90%; max-width: 400px; box-shadow: var(--shadow-lg); position: relative;
+    }
+    .modal h3 { margin-top: 0; color: var(--green); }
+    .modal-close {
+      position: absolute; top: var(--space-sm); right: var(--space-sm);
+      background: none; border: none; font-size: 1.2rem; cursor: pointer; color: #999;
+    }
+    .modal-close:hover { color: var(--red); }
+    .input-group { margin-bottom: var(--space-md); }
+    label { display: block; margin-bottom: var(--space-xs); font-weight: 600; }
+    input[type="text"], input[type="checkbox"] { width: 100%; padding: 0.6rem; border: 1px solid var(--border); border-radius: var(--radius-md); font-size: 1rem; }
+    input[type="checkbox"] { width: auto; margin-right: 0.5rem; }
+    .btn {
+      background: var(--green); color: white; border: none; padding: 0.6rem 1.2rem;
+      border-radius: var(--radius-md); font-weight: 600; cursor: pointer; margin-top: 0.5rem;
+      transition: background var(--transition), transform var(--transition);
+      text-decoration: none; display: inline-block;
+    }
+    .btn:hover, .btn:focus-visible { background: var(--green-dark); transform: translateY(-2px); }
+    .btn:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+    .btn-whatsapp { background: #25D366; }
+    .btn-whatsapp:hover { background: #128C7E; }
+
+    /* === LESSON CONTENT === */
+    .section { margin-bottom: var(--space-lg); padding-bottom: var(--space-md); border-bottom: 1px solid var(--border); }
+    .word-list { display: flex; flex-wrap: wrap; gap: var(--space-xs); margin: var(--space-sm) 0; }
+    .word-item { background: var(--light); padding: 0.25rem 0.5rem; border-radius: var(--radius-sm); font-family: monospace; font-size: 0.95rem; }
+    table { width: 100%; border-collapse: collapse; margin: var(--space-sm) 0; }
+    th, td { border: 1px solid var(--border); padding: 0.5rem; text-align: left; }
+    th { background-color: #f0f7f4; }
+    blockquote {
+      margin: var(--space-md) 0; padding-left: var(--space-md);
+      border-left: 3px solid var(--green); color: #555; font-style: italic;
+    }
+    .checkpoint {
+      background: #f8f9fa; padding: var(--space-md); border-left: 4px solid var(--gold);
+      margin: var(--space-lg) 0; border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    .example-box {
+      background: #e8f5ee; border: 1px dashed var(--green); padding: var(--space-sm);
+      border-radius: var(--radius-md); margin: var(--space-sm) 0; font-size: 0.95rem;
+    }
+    .error-example { background: #fde8ea; border-color: var(--red); }
+
+    /* === QUIZ === */
+    .quiz { margin-top: var(--space-lg); }
+    .question { margin-bottom: var(--space-md); }
+    .options { margin-left: var(--space-sm); }
+    .option { margin: 0.4rem 0; }
+    .option label { font-weight: normal; }
+
+    /* === DASHBOARD & REPORTS === */
+    .card {
+      background: white; padding: var(--space-lg); border-radius: var(--radius-lg);
+      margin-bottom: var(--space-lg); box-shadow: var(--shadow-md);
+    }
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: var(--space-sm); margin: var(--space-sm) 0; }
+    .stat-item { text-align: center; padding: var(--space-sm); background: #f8f9fa; border-radius: var(--radius-md); }
+    .stat-value { font-size: 1.5rem; font-weight: bold; color: var(--green); }
+    .lesson-item { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid #eee; }
+    .lesson-item:last-child { border-bottom: none; }
+    .mastery-indicator { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; }
+    .mastery-yes { background: var(--green); }
+    .mastery-partial { background: #ffc107; }
+    .error { background: #f8d7da; color: #721c24; padding: var(--space-md); border-radius: var(--radius-md); margin: var(--space-md) 0; }
+
+    /* === REPORT LIST === */
+    .report-card {
+      background: #f8f9fa; border-left: 4px solid var(--green); padding: var(--space-md);
+      margin-bottom: var(--space-md); border-radius: 0 var(--radius-md) var(--radius-md) 0; position: relative;
+    }
+    .report-header { display: flex; justify-content: space-between; margin-bottom: var(--space-xs); font-weight: bold; }
+    .report-meta { font-size: 0.85rem; color: #666; margin-bottom: var(--space-xs); }
+    .report-actions { margin-top: var(--space-sm); display: flex; gap: var(--space-xs); flex-wrap: wrap; }
+    .report-actions button { padding: 0.3rem 0.6rem; font-size: 0.85rem; }
+    .report-detail {
+      margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px dashed #ddd;
+      font-size: 0.9rem; white-space: pre-wrap; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+    }
+    .report-detail.show { max-height: 500px; }
+
+    /* === FEEDBACK === */
+    .feedback {
+      margin-top: var(--space-lg); padding: var(--space-md); background: var(--light);
+      border-left: 4px solid var(--green); border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    .feedback details { margin-top: var(--space-md); padding: var(--space-sm); border-radius: var(--radius-md); }
+    .feedback details[open] { background: #e8f5e9; }
+    .feedback details summary { cursor: pointer; font-weight: 600; }
+
+    /* === CHAPTER NAVIGATION === */
+    .chapter-nav { margin-top: var(--space-xl); text-align: center; padding-top: var(--space-md); border-top: 1px solid var(--border); }
+    .chapter-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-xs); margin-bottom: var(--space-md); }
+    .chapter-btn {
+      padding: 0.4rem 0.8rem; background: var(--light); color: var(--dark); text-decoration: none;
+      border-radius: var(--radius-sm); font-size: 0.9rem; transition: background var(--transition);
+    }
+    .chapter-btn.active, .chapter-btn:hover { background: var(--green); color: white; }
+
+    /* === FOOTER (EduCore Style) === */
+    .footer {
+      background: var(--dark); color: #cbd5e1; padding-block: var(--space-xl); margin-top: var(--space-xl);
+    }
+    .footer__grid {
+      display: grid; gap: var(--space-lg); grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      max-width: var(--max-w); margin: 0 auto; padding: 0 var(--space-md);
+    }
+    .footer__title { color: white; margin-bottom: var(--space-sm); font-size: 1.1rem; }
+    .footer__link { color: #94a3b8; transition: color var(--transition); display: inline-block; margin-bottom: var(--space-xs); text-decoration: none; }
+    .footer__link:hover { color: white; text-decoration: underline; }
+    .footer__bottom {
+      text-align: center; margin-top: var(--space-lg); padding-top: var(--space-sm);
+      border-top: 1px solid #334155; max-width: var(--max-w); margin-inline: auto; padding-inline: var(--space-md);
+    }
+
+    /* === PRINT STYLES === */
+    @media print {
+      .header, .footer, .nav__toggle, .btn:not(.btn-whatsapp), .tabs, .settings-btn, .chapter-nav { display: none !important; }
+      body { background: white; color: black; }
+      .container { padding-top: 0; }
+      #print-report, #print-report * { visibility: visible; }
+      #print-report {
+        position: absolute; left: 0; top: 0; width: 100%; font-family: monospace;
+        white-space: pre-wrap; padding: 20px; box-sizing: border-box; font-size: 12pt;
+      }
+    }
+
+    /* === ACCESSIBILITY OVERRIDES === */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --surface: #111827; --light: #1e293b; --border: #334155; --dark: #f1f5f9;
+      }
+      .card, .modal-content, .report-card { background: #1e293b; }
+      .feedback details[open] { background: #064e3b; }
+      .example-box { background: #064e3b; border-color: #10b981; }
+      .error-example { background: #450a0a; border-color: #f87171; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip Link -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Professional Header -->
+  <header class="header" role="banner">
+    <div class="nav container" style="padding: 0; max-width: 100%;">
+      <a href="../index.html" class="nav__brand" aria-label="Mini OpenStax Home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        Mini OpenStax
+      </a>
+      <button class="nav__toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+      <nav id="main-nav" class="nav__list" role="navigation">
+        <a href="../index.html" class="nav__link">Home</a>
+        <a href="../dashboard.html" class="nav__link">Dashboard</a>
+        <a href="englishGrammar-Day2.html" class="nav__link" aria-current="page">English Grammar</a>
+        <a href="../contact.html" class="nav__link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Mini OpenStax App Header -->
+    <div class="app-header">
+      <div>
+        <h1 id="page-title">Uses of Simple Present Tense</h1>
+        <div class="lo-tags">Page 27 • English Grammar Intensive Module</div>
+      </div>
+      <div style="display:flex;gap:0.5rem;align-items:center;">
+        <div class="role-badge" id="current-role">Student View</div>
+        <button class="settings-btn" id="open-settings" title="Change name or role">
+          <i class="fas fa-cog"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="lesson">Lesson</button>
+      <button class="tab-btn" data-tab="dashboard">Dashboard</button>
+      <button class="tab-btn" data-tab="analytics" id="analytics-tab" style="display:none;">Analytics</button>
+    </div>
+
+    <!-- LESSON TAB -->
+    <div id="tab-lesson" class="tab-content">
+      <div class="section">
+        <h2>🎯 What You'll Learn</h2>
+        <ul id="objectives">
+          <li>Use Simple Present to describe actions that occur at regular intervals.</li>
+          <li>State general truths and scientific facts using Simple Present.</li>
+          <li>Refer to printed material and describe events portrayed in books or films.</li>
+          <li>Express future or past events using Simple Present in special contexts.</li>
+          <li>Differentiate between the four primary uses of the Simple Present tense.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>🔤 Important Words</h2>
+        <p>Key terms we will master today:</p>
+        <div class="word-list" id="word-list">
+          <span class="word-item">Regular Intervals</span>
+          <span class="word-item">General Truths</span>
+          <span class="word-item">Printed Material</span>
+          <span class="word-item">Work of Art</span>
+          <span class="word-item">Future Events</span>
+          <span class="word-item">Past Events</span>
+          <span class="word-item">Newspaper Headline</span>
+          <span class="word-item">Schedule</span>
+        </div>
+      </div>
+
+      <div class="section" id="lesson-content">
+        <h2>📘 Master Class: Uses of Simple Present Tense</h2>
+        <p>Welcome to Day 2! The Simple Present is one of four present tenses in English, and it is used in various ways beyond just describing what is happening right now. Today we will explore the four primary uses of the Simple Present tense with clear examples. Let's dive in!</p>
+        
+        <h3>🔄 Part 1: Actions at Regular Intervals</h3>
+        <p>The Simple Present is commonly used to refer to actions which occur at <strong>regular intervals</strong>. These are habits, routines, or things that happen repeatedly on a schedule.</p>
+        <div class="example-box">
+          <strong>Deep Dive:</strong> Look for time expressions like "every Sunday", "once a year", or "every fall".<br>
+          • "We <strong>visit</strong> our friends every Sunday."<br>
+          • "They <strong>take</strong> a holiday once a year."<br>
+          • "Geese <strong>fly</strong> south every fall."<br>
+          <strong>Real-Life Example:</strong> If you say, "I brush my teeth every morning," you are using the Simple Present to show a regular habit!
+        </div>
+
+        <h3>🌍 Part 2: Stating General Truths</h3>
+        <p>The Simple Present is also used in stating <strong>general truths</strong> or facts that are always true, regardless of time. This is very common in science and geography.</p>
+        <div class="example-box">
+          <strong>Deep Dive:</strong> These are facts that cannot be disputed.<br>
+          • "Water <strong>expands</strong> when heated."<br>
+          • "The Pacific Ocean <strong>is</strong> the largest ocean in the world."<br>
+          • "Canada <strong>lies</strong> north of the United States."<br>
+          <strong>Real-Life Example:</strong> "The sun rises in the east." This is a general truth that is always stated in the Simple Present.
+        </div>
+
+        <h3>📚 Part 3: Referring to Printed Material or Media</h3>
+        <p>In addition, the Simple Present is used when referring to <strong>printed material</strong>, and when describing events portrayed in a book, film, or other work of art.</p>
+        <div class="example-box">
+          <strong>Deep Dive:</strong> Even if the book was written in the past, we use the Simple Present to describe its contents.<br>
+          • "The report <strong>presents</strong> the information clearly."<br>
+          • "At the end of the film, the hero <strong>finds</strong> the hidden treasure."<br>
+          <strong>Real-Life Example:</strong> When telling a friend about a movie you watched, you say, "In the movie, the detective solves the crime," not "solved."
+        </div>
+
+        <h3>📅 Part 4: Future or Past Events</h3>
+        <p>Occasionally, the Simple Present is used to express actions occurring in the <strong>future</strong> or the <strong>past</strong>.</p>
+        <div class="example-box">
+          <strong>Deep Dive:</strong> <br>
+          • <strong>Future:</strong> Used for scheduled events. "Our plane <strong>leaves</strong> at eight o'clock tomorrow night."<br>
+          • <strong>Past:</strong> Used in the style of a newspaper headline to refer to something which happened in the past. "Fugitives <strong>steal</strong> valuable paintings."<br>
+          <strong>Real-Life Example:</strong> If you look at a news website, you will often see headlines like "President Signs New Bill" even though the signing already happened yesterday!
+        </div>
+
+        <blockquote>
+          💭 <strong>Think About It</strong>: If you were writing a summary of your favorite movie, which tense would you use to describe what the main character does? How would you write a newspaper headline about a football match your school won yesterday?
+        </blockquote>
+      </div>
+
+      <div class="section">
+        <h2>✅ Check Your Understanding</h2>
+        <div class="checkpoint">
+          <ol>
+            <li>Give an example of an action that occurs at regular intervals.</li>
+            <li>How is the Simple Present used to state general truths?</li>
+            <li>When describing a film or book, which tense is typically used?</li>
+            <li>How can the Simple Present be used to talk about the future?</li>
+            <li>In what style is the Simple Present used to refer to past events?</li>
+          </ol>
+          <p><em>Confirm your understanding before moving on to the quiz.</em></p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>📝 Quick Quiz (20 Questions)</h2>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check Answers</button>
+      </div>
+
+      <!-- Day Navigation -->
+      <div class="chapter-nav" id="chapter-navigation">
+        <div class="chapter-tabs" id="chapter-tabs"></div>
+        <div>
+          <button id="prev-btn" class="btn" style="margin-right: 0.5rem; display: none;">← Previous Day</button>
+          <button id="next-btn" class="btn" style="display: none;">Next Day →</button>
+        </div>
+      </div>
+
+      <div id="feedback"></div>
+    </div>
+
+    <!-- DASHBOARD TAB -->
+    <div id="tab-dashboard" class="tab-content" style="display:none;">
+      <div class="card">
+        <h2>Hello, <span id="dashboard-name">Learner</span>!</h2>
+        <div class="stat-grid">
+          <div class="stat-item">
+            <div class="stat-value" id="stat-mastered">0</div>
+            <div class="stat-label">Mastered</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="stat-total">1</div>
+            <div class="stat-label">Total Days</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="stat-percent">0%</div>
+            <div class="stat-label">Progress</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2><i class="fas fa-history"></i> Recent Activity</h2>
+        <div id="recent-lessons">No activity yet.</div>
+      </div>
+      <div class="card">
+        <h2><i class="fas fa-file-alt"></i> Quiz Reports</h2>
+        <div id="reports-list"><p>Loading reports...</p></div>
+        <button class="btn btn-whatsapp" id="btn-send-all" style="margin-top:1rem;">Send All Reports via WhatsApp</button>
+      </div>
+    </div>
+
+    <!-- ANALYTICS TAB -->
+    <div id="tab-analytics" class="tab-content" style="display:none;">
+      <div class="card">
+        <h2>📊 Class Analytics</h2>
+        <div id="analytics-content">Loading...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings Modal -->
+  <div id="settings-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="close-settings">&times;</button>
+      <h3>👤 Account Settings</h3>
+      <div class="input-group">
+        <label for="edit-name">Your Name</label>
+        <input type="text" id="edit-name" maxlength="30" placeholder="e.g., Ama">
+      </div>
+      <div class="input-group">
+        <label><input type="checkbox" id="edit-role"> Switch to Instructor Mode</label>
+      </div>
+      <button class="btn" id="save-settings">Save Changes</button>
+    </div>
+  </div>
+
+  <!-- Professional Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__grid">
+      <div>
+        <h4 class="footer__title">Mini OpenStax</h4>
+        <p style="max-width: 30ch; opacity: 0.9;">Free, accessible educational content for learners. Built with ❤️ for mastering English Grammar.</p>
+      </div>
+      <div>
+        <h4 class="footer__title">Quick Links</h4>
+        <nav aria-label="Footer navigation">
+          <a href="../index.html" class="footer__link">Home</a><br>
+          <a href="../dashboard.html" class="footer__link">Dashboard</a><br>
+          <a href="englishGrammar-Day2.html" class="footer__link">English Grammar</a><br>
+          <a href="../contact.html" class="footer__link">Contact Support</a>
+        </nav>
+      </div>
+      <div>
+        <h4 class="footer__title">Contact</h4>
+        <address style="font-style: normal; opacity: 0.9;">
+          <a href="tel:+233257320201" class="footer__link">+233 25 732 0201</a><br>
+          <a href="mailto:learn@miniopenstax.edu.gh" class="footer__link">learn@miniopenstax.edu.gh</a><br>
+          Accra, Ghana
+        </address>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span id="year"></span> Mini OpenStax. Content aligned with international grammar standards. <a href="../privacy.html" class="footer__link">Privacy</a></p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+      const WHATSAPP_NUMBER = "233257320201";
+      window.startTime = Date.now();
+
+      // === AUTO-DETECT DAY NUMBER FROM URL ===
+      const path = window.location.pathname;
+      const match = path.match(/englishGrammar-Day(\d+)\.html/);
+      const currentDay = match ? parseInt(match[1], 10) - 1 : 1; // 0-indexed, Day 2 is 1
+      const MAX_DAYS = 4; // 5 days total (0 to 4)
+
+      function getDayUrl(n) {
+        return `englishGrammar-Day${n + 1}.html`;
+      }
+
+      let userName = localStorage.getItem('student_name') || 'Learner';
+      let userRole = localStorage.getItem('user_role') || 'student';
+
+      localStorage.setItem('student_name', userName);
+      localStorage.setItem('user_role', userRole);
+
+      document.getElementById('dashboard-name').textContent = userName;
+      document.getElementById('current-role').textContent = userRole === 'instructor' ? 'Instructor View' : 'Student View';
+
+      const analyticsTab = document.getElementById('analytics-tab');
+      analyticsTab.style.display = userRole === 'instructor' ? 'block' : 'none';
+
+      // === UTILS ===
+      function createSeededRNG(seed) {
+        let state = Math.abs((seed * 9301 + 49297) % 233280);
+        return () => { state = (state * 9301 + 49297) % 233280; return state / 233280; };
+      }
+      function shuffleWithSeed(array, seed) {
+        const rng = createSeededRNG(seed);
+        const arr = [...array];
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(rng() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+      }
+
+      // === PROFESSIONAL NAV TOGGLE ===
+      const navToggle = document.querySelector('.nav__toggle');
+      const navList = document.querySelector('.nav__list');
+      if (navToggle && navList) {
+        navToggle.addEventListener('click', () => {
+          const isOpen = navList.classList.toggle('is-open');
+          navToggle.setAttribute('aria-expanded', isOpen);
+          navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+        });
+        document.addEventListener('click', (e) => {
+          if (navList.classList.contains('is-open') && !navList.contains(e.target) && !navToggle.contains(e.target)) {
+            navList.classList.remove('is-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && navList.classList.contains('is-open')) {
+            navList.classList.remove('is-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.focus();
+          }
+        });
+      }
+
+      // === SETTINGS MODAL ===
+      const modal = document.getElementById('settings-modal');
+      document.getElementById('open-settings').onclick = () => {
+        document.getElementById('edit-name').value = userName;
+        document.getElementById('edit-role').checked = (userRole === 'instructor');
+        modal.style.display = 'flex';
+      };
+      document.getElementById('close-settings').onclick = () => modal.style.display = 'none';
+      document.getElementById('save-settings').onclick = () => {
+        const newName = document.getElementById('edit-name').value.trim();
+        if (!newName) { alert("Please enter a name."); return; }
+        const newRole = document.getElementById('edit-role').checked ? 'instructor' : 'student';
+        userName = newName; userRole = newRole;
+        localStorage.setItem('student_name', userName);
+        localStorage.setItem('user_role', userRole);
+        document.getElementById('dashboard-name').textContent = userName;
+        document.getElementById('current-role').textContent = newRole === 'instructor' ? 'Instructor View' : 'Student View';
+        analyticsTab.style.display = newRole === 'instructor' ? 'block' : 'none';
+        modal.style.display = 'none';
+        if (document.querySelector('.tab-btn.active')?.dataset.tab === 'dashboard') { updateDashboard(); loadReports(); }
+      };
+      window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+
+      // === QUIZ DATA (20 Questions - Day 2 Topics) ===
+      const assessmentItems = [
+        {id:"1",prompt:"What is the first use of the Simple Present tense mentioned in the text?",options:[{id:"a",text:"Stating general truths",is_correct:false},{id:"b",text:"Referring to actions which occur at regular intervals",is_correct:true},{id:"c",text:"Describing past events",is_correct:false},{id:"d",text:"Giving commands",is_correct:false}]},
+        {id:"2",prompt:"Which sentence is an example of an action occurring at regular intervals?",options:[{id:"a",text:"Water expands when heated.",is_correct:false},{id:"b",text:"We visit our friends every Sunday.",is_correct:true},{id:"c",text:"The report presents the information clearly.",is_correct:false},{id:"d",text:"Our plane leaves at eight o'clock tomorrow night.",is_correct:false}]},
+        {id:"3",prompt:"'They take a holiday once a year.' This sentence demonstrates the use of Simple Present for:",options:[{id:"a",text:"General truths",is_correct:false},{id:"b",text:"Future events",is_correct:false},{id:"c",text:"Actions at regular intervals",is_correct:true},{id:"d",text:"Printed material",is_correct:false}]},
+        {id:"4",prompt:"How is the Simple Present tense used in the sentence 'Water expands when heated.'?",options:[{id:"a",text:"To refer to regular intervals",is_correct:false},{id:"b",text:"To state a general truth",is_correct:true},{id:"c",text:"To describe a film",is_correct:false},{id:"d",text:"To express a future event",is_correct:false}]},
+        {id:"5",prompt:"Which of the following is an example of stating a general truth?",options:[{id:"a",text:"Geese fly south every fall.",is_correct:false},{id:"b",text:"The Pacific Ocean is the largest ocean in the world.",is_correct:true},{id:"c",text:"At the end of the film, the hero finds the hidden treasure.",is_correct:false},{id:"d",text:"Our plane leaves tomorrow.",is_correct:false}]},
+        {id:"6",prompt:"'Canada lies north of the United States.' This is an example of:",options:[{id:"a",text:"A general truth",is_correct:true},{id:"b",text:"A future event",is_correct:false},{id:"c",text:"A newspaper headline",is_correct:false},{id:"d",text:"An action at regular intervals",is_correct:false}]},
+        {id:"7",prompt:"When is the Simple Present used when referring to printed material?",options:[{id:"a",text:"To express past events",is_correct:false},{id:"b",text:"To describe events portrayed in a book, film, or work of art",is_correct:true},{id:"c",text:"To state general truths",is_correct:false},{id:"d",text:"To show regular intervals",is_correct:false}]},
+        {id:"8",prompt:"Which sentence describes an event portrayed in a film?",options:[{id:"a",text:"The report presents the information clearly.",is_correct:false},{id:"b",text:"At the end of the film, the hero finds the hidden treasure.",is_correct:true},{id:"c",text:"Water expands when heated.",is_correct:false},{id:"d",text:"They take a holiday once a year.",is_correct:false}]},
+        {id:"9",prompt:"'The report presents the information clearly.' What does this sentence refer to?",options:[{id:"a",text:"A general truth",is_correct:false},{id:"b",text:"Printed material",is_correct:true},{id:"c",text:"A future event",is_correct:false},{id:"d",text:"A past event",is_correct:false}]},
+        {id:"10",prompt:"How can the Simple Present be used to express actions occurring in the future?",options:[{id:"a",text:"By using a newspaper headline style",is_correct:false},{id:"b",text:"By referring to scheduled events like 'Our plane leaves at eight o'clock tomorrow night.'",is_correct:true},{id:"c",text:"By stating general truths",is_correct:false},{id:"d",text:"By describing a book",is_correct:false}]},
+        {id:"11",prompt:"Which sentence shows the Simple Present used for a future event?",options:[{id:"a",text:"Geese fly south every fall.",is_correct:false},{id:"b",text:"Our plane leaves at eight o'clock tomorrow night.",is_correct:true},{id:"c",text:"The Pacific Ocean is the largest ocean in the world.",is_correct:false},{id:"d",text:"We visit our friends every Sunday.",is_correct:false}]},
+        {id:"12",prompt:"In what style is the Simple Present used to refer to something that happened in the past?",options:[{id:"a",text:"A poem",is_correct:false},{id:"b",text:"A newspaper headline",is_correct:true},{id:"c",text:"A friendly letter",is_correct:false},{id:"d",text:"A novel",is_correct:false}]},
+        {id:"13",prompt:"Which of the following is an example of a newspaper headline using the Simple Present for a past event?",options:[{id:"a",text:"Water expands when heated.",is_correct:false},{id:"b",text:"Fugitives Steal Valuable Paintings",is_correct:true},{id:"c",text:"They take a holiday once a year.",is_correct:false},{id:"d",text:"The hero finds the hidden treasure.",is_correct:false}]},
+        {id:"14",prompt:"'Geese fly south every fall.' This demonstrates:",options:[{id:"a",text:"Stating general truths",is_correct:false},{id:"b",text:"Actions at regular intervals",is_correct:true},{id:"c",text:"Future events",is_correct:false},{id:"d",text:"Printed material",is_correct:false}]},
+        {id:"15",prompt:"Which of the following is NOT one of the four uses of the Simple Present tense detailed in the text?",options:[{id:"a",text:"Actions at regular intervals",is_correct:false},{id:"b",text:"Stating general truths",is_correct:false},{id:"c",text:"Expressing commands and requests",is_correct:true},{id:"d",text:"Referring to printed material",is_correct:false}]},
+        {id:"16",prompt:"What do the phrases 'every Sunday', 'once a year', and 'every fall' indicate in Simple Present sentences?",options:[{id:"a",text:"General truths",is_correct:false},{id:"b",text:"Regular intervals",is_correct:true},{id:"c",text:"Future schedules",is_correct:false},{id:"d",text:"Past events",is_correct:false}]},
+        {id:"17",prompt:"'The Pacific Ocean is the largest ocean in the world.' This sentence is used to:",options:[{id:"a",text:"Describe a film",is_correct:false},{id:"b",text:"State a general truth",is_correct:true},{id:"c",text:"Show a regular habit",is_correct:false},{id:"d",text:"Predict the future",is_correct:false}]},
+        {id:"18",prompt:"If a book summary says, 'In the last chapter, the main character discovers the secret,' what tense is primarily used to describe the events in the book?",options:[{id:"a",text:"Simple Past",is_correct:false},{id:"b",text:"Simple Present",is_correct:true},{id:"c",text:"Present Continuous",is_correct:false},{id:"d",text:"Future Simple",is_correct:false}]},
+        {id:"19",prompt:"Why is the Simple Present used in 'Our plane leaves at eight o'clock tomorrow night'?",options:[{id:"a",text:"Because the action happened in the past",is_correct:false},{id:"b",text:"Because it is a general truth",is_correct:false},{id:"c",text:"Because it expresses an action occurring in the future",is_correct:true},{id:"d",text:"Because it describes a film",is_correct:false}]},
+        {id:"20",prompt:"How many primary uses of the Simple Present tense are explicitly detailed in the lesson?",options:[{id:"a",text:"Two",is_correct:false},{id:"b",text:"Three",is_correct:false},{id:"c",text:"Four",is_correct:true},{id:"d",text:"Five",is_correct:false}]}
+      ];
+
+      // === RENDER QUIZ ===
+      function renderQuiz() {
+        const form = document.getElementById('quiz-form');
+        window.quizCorrectMap = {};
+        const baseSeed = currentDay * 1000000 + (Date.now() % 1000000);
+        form.innerHTML = assessmentItems.map(q => {
+          const seed = baseSeed + parseInt(q.id, 10);
+          const shuffledOpts = shuffleWithSeed([...q.options], seed);
+          const correct = q.options.find(o => o.is_correct);
+          window.quizCorrectMap[q.id] = correct.id;
+          const optHtml = shuffledOpts.map((opt, idx) => {
+            const letter = String.fromCharCode(65 + idx);
+            return `<div class="option"><label><input type="radio" name="q${q.id}" value="${opt.id}" required> ${letter}. ${opt.text}</label></div>`;
+          }).join('');
+          return `<div class="question"><strong>${q.id}. ${q.prompt}</strong><div class="options">${optHtml}</div></div>`;
+        }).join('');
+      }
+
+      // === SUBMIT QUIZ ===
+      document.getElementById('submit-quiz').addEventListener('click', () => {
+        const form = document.getElementById('quiz-form');
+        const answers = [];
+        for (let i = 1; i <= assessmentItems.length; i++) {
+          const el = form.querySelector(`input[name="q${i}"]:checked`);
+          answers.push(el ? el.value : null);
+        }
+        if (answers.includes(null)) { alert("Please answer all questions."); return; }
+
+        let correctCount = 0;
+        const correctList = [], incorrectList = [];
+        assessmentItems.forEach((item, i) => {
+          const ans = answers[i], correctId = window.quizCorrectMap[item.id];
+          const correctOpt = item.options.find(o => o.id === correctId);
+          const yourAnswerOpt = item.options.find(o => o.id === ans);
+          if (ans === correctId) {
+            correctCount++;
+            correctList.push({id:item.id, prompt:item.prompt, correctText:correctOpt.text});
+          } else {
+            incorrectList.push({id:item.id, prompt:item.prompt, yourAnswer:yourAnswerOpt?.text||'—', correctAnswer:correctOpt.text});
+          }
+        });
+
+        const score = correctCount, total = assessmentItems.length;
+        const mastery = score >= Math.ceil(total * 0.75);
+        const timeOnTask = Math.floor((Date.now() - window.startTime) / 1000);
+        const attempts = (parseInt(localStorage.getItem(`quiz_attempts_${currentDay}`)) || 0) + 1;
+        localStorage.setItem(`quiz_attempts_${currentDay}`, attempts);
+        localStorage.setItem(`mastery_${currentDay}`, mastery ? '1' : '0');
+
+        let report = `*Mini OpenStax — English Grammar Day ${currentDay + 1}: Uses of Simple Present Tense*\nStudent: ${userName}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeOnTask}s | Attempts: ${attempts}\n\n`;
+        if (correctList.length) {
+          report += `✅ CORRECT ANSWERS (${correctList.length}):\n`;
+          correctList.forEach(q => report += `${q.id}. ${q.prompt}\n   → ${q.correctText}\n\n`);
+        }
+        if (incorrectList.length) {
+          report += `❌ INCORRECT ANSWERS (${incorrectList.length}):\n`;
+          incorrectList.forEach(q => report += `${q.id}. ${q.prompt}\n   Your answer: ${q.yourAnswer}\n   Correct answer: ${q.correctAnswer}\n\n`);
+        }
+        report += `Report generated via Mini OpenStax.\n\nCALL OR WHATSAPP TO REGISTER FOR A CLASS @ +233257320201`;
+
+        const timestamp = Date.now();
+        localStorage.setItem(`saved_report_${currentDay}_${timestamp}`, report);
+
+        let feedbackHTML = `<div class="feedback"><h3>📊 Results: ${score}/${total}</h3><p><strong>${mastery ? '🎉 Excellent! You are a Grammar Champion!' : score >= total/2 ? 'Good effort! Review the notes on the four uses of Simple Present again.' : 'Keep practicing! Read the notes carefully and try again.'}</strong></p><p><strong>Time:</strong> ${timeOnTask}s | <strong>Attempts:</strong> ${attempts}</p>`;
+        if (correctList.length) {
+          feedbackHTML += `<details style="margin-top:1rem; background:#e8f5e9; padding:0.8rem; border-radius:6px;"><summary><strong>✅ Correct Answers (${correctList.length})</strong></summary><ul style="margin-top:0.5rem; padding-left:1.2rem;">${correctList.map(q => `<li>${q.id}. ${q.prompt}<br><em>→ ${q.correctText}</em></li>`).join('')}</ul></details>`;
+        }
+        if (incorrectList.length) {
+          feedbackHTML += `<details open style="margin-top:1rem; background:#ffebee; padding:0.8rem; border-radius:6px;"><summary><strong>❌ Incorrect Answers (${incorrectList.length})</strong></summary><ul style="margin-top:0.5rem; padding-left:1.2rem;">${incorrectList.map(q => `<li>${q.id}. ${q.prompt}<br><em>Your answer:</em> ${q.yourAnswer}<br><em>Correct answer:</em> ${q.correctAnswer}</li>`).join('')}</ul></details>`;
+        }
+        feedbackHTML += `<a href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}" target="_blank" class="btn btn-whatsapp" style="margin-top:1.5rem; display:inline-block;">📲 Send Full Report via WhatsApp</a></div>`;
+        document.getElementById('feedback').innerHTML = feedbackHTML;
+        if (document.querySelector('.tab-btn.active')?.dataset.tab === 'dashboard') { updateDashboard(); loadReports(); }
+      });
+
+      // === LOAD REPORTS ===
+      function loadReports() {
+        const container = document.getElementById('reports-list');
+        const reports = [];
+        for (const key in localStorage) {
+          if (key.startsWith(`saved_report_${currentDay}_`)) {
+            const content = localStorage.getItem(key);
+            const ts = parseInt(key.split('_').pop()) || 0;
+            reports.push({ key, content, timestamp: ts });
+          }
+        }
+        if (reports.length === 0) { container.innerHTML = '<p>No quiz reports yet.</p>'; return; }
+        reports.sort((a, b) => b.timestamp - a.timestamp);
+        container.innerHTML = reports.map(rep => {
+          const lines = rep.content.split('\n');
+          const student = (lines.find(l => l.startsWith('Student:')) || '').replace('Student: ', '').trim() || 'Unknown';
+          const score = (lines.find(l => l.startsWith('Score:')) || 'Score unknown');
+          const date = new Date(rep.timestamp).toLocaleString();
+          return `<div class="report-card"><div class="report-header"><span>Day ${currentDay + 1}: Uses of Simple Present Tense</span><span>${date}</span></div><div class="report-meta">Student: ${student} • ${score}</div><div class="report-detail" id="detail-${rep.timestamp}"></div><div class="report-actions"><button class="btn" onclick="toggleDetail(${rep.timestamp})">Details</button><button class="btn" onclick="viewReportAsPDF('${rep.key}')">PDF</button><button class="btn btn-whatsapp" onclick="sendReport('${rep.key}')">WhatsApp</button></div></div>`;
+        }).join('');
+        window.reportContents = {};
+        reports.forEach(r => window.reportContents[r.timestamp] = r.content);
+      }
+      window.toggleDetail = (ts) => { const el = document.getElementById(`detail-${ts}`); if (el.classList.contains('show')) { el.classList.remove('show'); } else { el.textContent = window.reportContents[ts] || ''; el.classList.add('show'); } };
+      window.sendReport = (key) => { const content = localStorage.getItem(key); if (content) window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(content)}`, '_blank'); };
+      window.viewReportAsPDF = (key) => {
+        const content = localStorage.getItem(key); if (!content) return alert("Report not found.");
+        const printDiv = document.createElement('div'); printDiv.id = 'print-report'; printDiv.textContent = content;
+        document.body.appendChild(printDiv); window.print(); setTimeout(() => document.body.removeChild(printDiv), 1000);
+      };
+
+      // === DASHBOARD ===
+      function updateDashboard() {
+        const mastered = localStorage.getItem(`mastery_${currentDay}`) === '1' ? 1 : 0;
+        document.getElementById('stat-mastered').textContent = mastered;
+        document.getElementById('stat-total').textContent = 1;
+        document.getElementById('stat-percent').textContent = `${mastered * 100}%`;
+        document.getElementById('recent-lessons').innerHTML = `<div class="lesson-item"><div><span class="mastery-indicator ${mastered ? 'mastery-yes' : 'mastery-partial'}"></span>Day ${currentDay + 1}: Uses of Simple Present Tense</div><span>${mastered ? 'Mastered' : 'In Progress'}</span></div>`;
+      }
+      document.getElementById('btn-send-all').addEventListener('click', () => {
+        let msg = `*📚 Mini OpenStax — All Quiz Reports*\nStudent: ${userName}\n\n`; let count = 0;
+        for (const key in localStorage) { if (key.startsWith(`saved_report_${currentDay}_`)) { msg += `\n---\n${localStorage.getItem(key)}\n`; count++; } }
+        if (count === 0) return alert("No reports to send.");
+        msg += "\n\nCALL OR WHATSAPP TO REGISTER FOR A CLASS @ +233257320201";
+        if (msg.length > 3800) msg = msg.substring(0, 3800) + "\n\n... (truncated)";
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+      });
+
+      // === ANALYTICS ===
+      function loadAnalytics() {
+        const reports = [];
+        for (const key in localStorage) {
+          if (key.startsWith(`saved_report_${currentDay}_`)) {
+            const v = localStorage.getItem(key); const m = v.match(/Score: (\d+)\//);
+            if (m) { const score = parseInt(m[1], 10); reports.push({ score, mastery: score >= 15 }); }
+          }
+        }
+        if (reports.length === 0) { document.getElementById('analytics-content').innerHTML = '<div class="error">No reports.</div>'; return; }
+        const total = reports.length, mastered = reports.filter(r => r.mastery).length;
+        const avg = (reports.reduce((s, r) => s + r.score, 0) / total).toFixed(1);
+        document.getElementById('analytics-content').innerHTML = `<div class="stat-grid"><div class="stat-item"><div class="stat-value">${total}</div><div>Attempts</div></div><div class="stat-item"><div class="stat-value">${avg}/20</div><div>Avg Score</div></div><div class="stat-item"><div class="stat-value">${((mastered/total)*100).toFixed(1)}%</div><div>Mastery</div></div></div>`;
+      }
+
+      // === TAB SWITCHING ===
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+          document.querySelectorAll('.tab-content').forEach(t => t.style.display = 'none');
+          btn.classList.add('active');
+          const tab = btn.dataset.tab;
+          document.getElementById(`tab-${tab}`).style.display = 'block';
+          if (tab === 'dashboard') { updateDashboard(); loadReports(); }
+          if (tab === 'analytics') loadAnalytics();
+        });
+      });
+
+      // === DAY NAVIGATION ===
+      function updateDayNavigation() {
+        const tabsContainer = document.getElementById('chapter-tabs');
+        const prevBtn = document.getElementById('prev-btn'); const nextBtn = document.getElementById('next-btn');
+        let tabsHtml = '';
+        for (let i = Math.max(0, currentDay - 1); i <= Math.min(MAX_DAYS, currentDay + 2); i++) {
+          const isActive = i === currentDay;
+          tabsHtml += `<a href="${getDayUrl(i)}" class="chapter-btn ${isActive ? 'active' : ''}">Day ${i + 1}</a>`;
+        }
+        tabsContainer.innerHTML = tabsHtml;
+        if (currentDay > 0) { prevBtn.style.display = 'inline-block'; prevBtn.onclick = () => window.location.href = getDayUrl(currentDay - 1); }
+        else { prevBtn.style.display = 'none'; }
+        if (currentDay < MAX_DAYS) { nextBtn.style.display = 'inline-block'; nextBtn.onclick = () => window.location.href = getDayUrl(currentDay + 1); }
+        else { nextBtn.style.display = 'none'; }
+      }
+
+      // === INIT ===
+      document.getElementById('year').textContent = new Date().getFullYear();
+      renderQuiz(); updateDayNavigation();
+      document.getElementById('send-analytics')?.addEventListener('click', (e) => { e.preventDefault(); alert("Usage data collection is handled globally."); });
+    })();
+  </script>
+</body>
+</html>
