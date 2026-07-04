@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Contact Mini OpenStax for support, class registration, and partnerships. Reach out via WhatsApp, email, or phone.">
+<title>Contact Us | Mini OpenStax</title>
+
+<!-- Google Fonts: Inter & Playfair Display via media="print" onload trick -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet"></noscript>
+
+<!-- Font Awesome 6.4.0 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+:root {
+  --green: #006b3d;
+  --green-dark: #00502e;
+  --green-light: #e8f5ee;
+  --gold: #cead00;
+  --gold-light: #fdf6d8;
+  --red: #ce1126;
+  --red-light: #fde8ea;
+  --light: #f9f9f9;
+  --dark: #2d2d2d;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --text: #1a202c;
+  --text-muted: #64748b;
+  --focus-ring: 0 0 0 3px rgba(0, 107, 61, 0.25);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.15);
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --max-w: 800px;
+  --max-w-wide: 1200px;
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --light: #0f1419;
+    --dark: #f5f5f5;
+    --surface: #1a202c;
+    --border: #2d3748;
+    --text: #f1f5f9;
+    --text-muted: #94a3b8;
+    --green-light: #0a2e1d;
+    --gold-light: #3d3400;
+    --red-light: #3d0a10;
+  }
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; line-height: 1.2; color: var(--text); }
+
+a { color: var(--green); text-decoration: none; transition: color var(--transition); }
+a:hover { color: var(--green-dark); }
+a:focus-visible { outline: none; box-shadow: var(--focus-ring); border-radius: var(--radius-sm); }
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: var(--space-md);
+  background: var(--green);
+  color: white;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  z-index: 1000;
+  transition: top var(--transition);
+}
+.skip-link:focus { top: var(--space-md); }
+
+/* HEADER */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+@media (prefers-color-scheme: dark) {
+  .site-header { background: rgba(26, 32, 44, 0.85); }
+}
+
+.header-inner {
+  max-width: var(--max-w-wide);
+  margin: 0 auto;
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--green);
+}
+.brand svg { flex-shrink: 0; }
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-xs) var(--space-sm);
+  cursor: pointer;
+  color: var(--text);
+  transition: all var(--transition);
+}
+.nav-toggle:hover { background: var(--green-light); border-color: var(--green); }
+.nav-toggle:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: var(--space-xs);
+  align-items: center;
+}
+.nav-list a {
+  display: block;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text);
+  transition: all var(--transition);
+}
+.nav-list a:hover { background: var(--green-light); color: var(--green); }
+.nav-list a[aria-current="page"] {
+  background: var(--green);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle { display: flex; align-items: center; gap: var(--space-xs); }
+  .nav-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: var(--space-md);
+    gap: var(--space-xs);
+    box-shadow: var(--shadow-md);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--transition);
+  }
+  .nav-list.is-open {
+    max-height: 500px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav-list a { width: 100%; padding: var(--space-sm) var(--space-md); }
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+  color: white;
+  padding: var(--space-3xl) var(--space-lg);
+  text-align: center;
+  border-bottom: 4px solid var(--gold);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 20% 50%, rgba(206, 173, 0, 0.15) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 80%, rgba(206, 17, 38, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero-inner { max-width: var(--max-w-wide); margin: 0 auto; position: relative; z-index: 1; }
+.hero h1 {
+  color: white;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  margin-bottom: var(--space-sm);
+  font-weight: 800;
+}
+.hero .subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  opacity: 0.95;
+  margin-bottom: var(--space-md);
+  font-weight: 500;
+}
+.hero .indicator {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--dark);
+  padding: var(--space-xs) var(--space-lg);
+  border-radius: var(--radius-xl);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-md);
+}
+
+/* MAIN */
+main {
+  max-width: var(--max-w-wide);
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-lg);
+  width: 100%;
+  flex: 1;
+}
+
+.section { margin-bottom: var(--space-3xl); }
+.section-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: var(--space-md);
+  color: var(--green-dark);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+.section-title::before {
+  content: '';
+  width: 5px;
+  height: 1.5em;
+  background: linear-gradient(180deg, var(--green), var(--gold));
+  border-radius: 3px;
+}
+.section-subtitle {
+  color: var(--text-muted);
+  margin-bottom: var(--space-xl);
+  font-size: 1.05rem;
+}
+
+/* CONTACT CARDS */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+.contact-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--green), var(--gold));
+}
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--green);
+}
+.contact-card i {
+  font-size: 2.5rem;
+  color: var(--green);
+  margin-bottom: var(--space-md);
+  display: inline-block;
+  transition: transform var(--transition);
+}
+.contact-card:hover i {
+  transform: scale(1.1);
+  color: var(--gold);
+}
+.contact-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-xs);
+  color: var(--green-dark);
+}
+.contact-card p, .contact-card a {
+  color: var(--text-muted);
+  font-size: 1rem;
+  word-break: break-word;
+  line-height: 1.5;
+}
+.contact-card a:hover {
+  color: var(--green);
+}
+
+/* FORM CONTAINER */
+.form-container {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-md);
+  max-width: 700px;
+  margin: 0 auto;
+}
+.form-group {
+  margin-bottom: var(--space-lg);
+}
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 1rem;
+  background: var(--light);
+  color: var(--text);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: var(--focus-ring);
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.btn-submit {
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background var(--transition), transform var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  box-shadow: var(--shadow-sm);
+}
+.btn-submit:hover {
+  background: #128C7E;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.btn-submit:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.4);
+}
+
+/* FAQ */
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-sm);
+  overflow: hidden;
+  transition: all var(--transition);
+}
+.faq-item[open] {
+  border-color: var(--green);
+  box-shadow: var(--shadow-sm);
+}
+.faq-item summary {
+  padding: var(--space-md) var(--space-lg);
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--green-dark);
+  font-size: 1.05rem;
+  transition: background var(--transition);
+}
+.faq-item summary:hover {
+  background: var(--green-light);
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--green);
+  transition: transform var(--transition);
+  flex-shrink: 0;
+  margin-left: var(--space-md);
+}
+.faq-item[open] summary::after {
+  content: '−';
+  transform: rotate(180deg);
+}
+.faq-item p {
+  padding: 0 var(--space-lg) var(--space-md);
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* FOOTER */
+.site-footer {
+  background: var(--dark);
+  color: #cbd5e0;
+  padding: var(--space-3xl) var(--space-lg) var(--space-lg);
+  margin-top: auto;
+}
+@media (prefers-color-scheme: dark) {
+  .site-footer { background: #0a0e14; }
+}
+.footer-inner {
+  max-width: var(--max-w-wide);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-col h4 {
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  margin-bottom: var(--space-md);
+}
+.footer-col p { font-size: 0.9rem; line-height: 1.7; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: var(--space-xs); }
+.footer-col ul li a {
+  color: #cbd5e0;
+  font-size: 0.9rem;
+  transition: color var(--transition);
+}
+.footer-col ul li a:hover { color: var(--gold); }
+.footer-col .contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  font-size: 0.9rem;
+}
+.footer-col .contact-item i {
+  color: var(--gold);
+  margin-top: 3px;
+  width: 16px;
+}
+.footer-bottom {
+  max-width: var(--max-w-wide);
+  margin: var(--space-lg) auto 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+.footer-bottom p { margin-bottom: var(--space-xs); }
+.footer-bottom a { color: var(--gold); }
+.footer-bottom .nacca {
+  display: inline-block;
+  background: rgba(206, 173, 0, 0.15);
+  color: var(--gold);
+  padding: 2px 10px;
+  border-radius: var(--radius-xl);
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: var(--space-xs);
+}
+
+/* UTILITIES */
+@media (max-width: 640px) {
+  main { padding: var(--space-xl) var(--space-md); }
+  .hero { padding: var(--space-2xl) var(--space-md); }
+  .contact-card { padding: var(--space-lg); }
+  .form-container { padding: var(--space-lg); }
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand" aria-label="Mini OpenStax Home">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="#006b3d"/>
+        <path d="M8 10 L16 6 L24 10 L24 22 L16 26 L8 22 Z" fill="#cead00" opacity="0.9"/>
+        <path d="M16 6 L16 26" stroke="#fff" stroke-width="1.5"/>
+        <path d="M8 10 L16 14 L24 10" stroke="#fff" stroke-width="1.5" fill="none"/>
+      </svg>
+      <span>Mini OpenStax</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navList" aria-label="Toggle navigation menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+      <span>Menu</span>
+    </button>
+
+    <nav aria-label="Primary navigation">
+      <ul class="nav-list" id="navList">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="englishChapter-0.html">English</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <h1>📞 Contact Us</h1>
+    <p class="subtitle">Get in touch with the Mini OpenStax team</p>
+    <span class="indicator">We're here to help!</span>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main id="main-content">
+
+  <!-- CONTACT INFO -->
+  <section class="section" aria-labelledby="contact-info-title">
+    <h2 class="section-title" id="contact-info-title">Reach Out to Us</h2>
+    <p class="section-subtitle">Whether you need technical support, want to register for a class, or are interested in a partnership, our team is ready to assist you.</p>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <i class="fa-solid fa-phone"></i>
+        <h3>Call Us</h3>
+        <p><a href="tel:+233257320201">+233 25 732 0201</a></p>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Mon - Fri, 8am - 5pm GMT</p>
+      </div>
+      
+      <div class="contact-card">
+        <i class="fa-brands fa-whatsapp"></i>
+        <h3>WhatsApp</h3>
+        <p><a href="https://wa.me/233257320201" target="_blank" rel="noopener">Chat with us instantly</a></p>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Fastest response time</p>
+      </div>
+      
+      <div class="contact-card">
+        <i class="fa-solid fa-envelope"></i>
+        <h3>Email Us</h3>
+        <p><a href="mailto:learn@miniopenstax.edu.gh">learn@miniopenstax.edu.gh</a></p>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem;">We reply within 24 hours</p>
+      </div>
+      
+      <div class="contact-card">
+        <i class="fa-solid fa-location-dot"></i>
+        <h3>Visit Us</h3>
+        <p>Accra, Ghana</p>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Serving learners nationwide</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="section" aria-labelledby="form-title">
+    <h2 class="section-title" id="form-title">Send a Message</h2>
+    <p class="section-subtitle">Fill out the form below. Your message will be securely sent directly to our support team via WhatsApp.</p>
+
+    <div class="form-container">
+      <form id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Your Name <span style="color: var(--red);">*</span></label>
+          <input type="text" id="name" name="name" required placeholder="e.g., Kwame Mensah">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address (Optional)</label>
+          <input type="email" id="email" name="email" placeholder="e.g., kwame@example.com">
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Subject <span style="color: var(--red);">*</span></label>
+          <select id="subject" name="subject" required>
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Class Registration">Class Registration</option>
+            <option value="Technical Support">Technical Support</option>
+            <option value="Partnership / Sponsorship">Partnership / Sponsorship</option>
+            <option value="Feedback">Feedback</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message <span style="color: var(--red);">*</span></label>
+          <textarea id="message" name="message" rows="5" required placeholder="How can we help you today?"></textarea>
+        </div>
+        
+        <button type="submit" class="btn-submit">
+          <i class="fa-brands fa-whatsapp"></i> Send via WhatsApp
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" aria-labelledby="faq-title">
+    <h2 class="section-title" id="faq-title">Frequently Asked Questions</h2>
+    <p class="section-subtitle">Find quick answers to common questions about our platform and services.</p>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>How do I register for a class?</summary>
+        <p>You can easily register by clicking the "Send via WhatsApp" button above or by calling us directly at +233 25 732 0201. Our admissions team will guide you through the simple enrollment process and help you select the right course.</p>
+      </details>
+      
+      <details class="faq-item">
+        <summary>Is the content aligned with the NaCCA curriculum?</summary>
+        <p>Yes! All our educational materials, including the Class 3 and Class 4 English Language modules, are strictly aligned with the Ghana National Council for Curriculum and Assessment (NaCCA) standards-based curriculum.</p>
+      </details>
+      
+      <details class="faq-item">
+        <summary>Can I track my child's or student's progress?</summary>
+        <p>Absolutely. Parents and instructors can switch to "Instructor Mode" in the Dashboard settings to view detailed analytics, quiz reports, and mastery tracking for the learners. Reports can also be shared directly via WhatsApp.</p>
+      </details>
+      
+      <details class="faq-item">
+        <summary>Do I need an internet connection to use the platform?</summary>
+        <p>Our web app is designed to be highly lightweight. While an initial internet connection is required to load the site, your progress, quiz attempts, and reports are saved locally on your device using browser storage.</p>
+      </details>
+      
+      <details class="faq-item">
+        <summary>Is Mini OpenStax free to use?</summary>
+        <p>We offer free access to our core educational content and lesson plans. For personalized tutoring, live classes, and advanced analytics, we offer affordable registration packages. Contact us for current pricing.</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>Mini OpenStax</h4>
+      <p>Free, high-quality, and accessible educational content for Ghanaian learners. Aligned with the NaCCA standards-based curriculum to empower every student.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="englishChapter-0.html">English Lessons</a></li>
+        <li><a href="contact.html">Contact Support</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <div class="contact-item"><i class="fa-solid fa-phone"></i> <span>+233 25 732 0201</span></div>
+      <div class="contact-item"><i class="fa-solid fa-envelope"></i> <a href="mailto:learn@miniopenstax.edu.gh">learn@miniopenstax.edu.gh</a></div>
+      <div class="contact-item"><i class="fa-solid fa-location-dot"></i> <span>Accra, Ghana</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Mini OpenStax. All rights reserved.</p>
+    <p><span class="nacca">Content aligned with NaCCA curriculum</span></p>
+    <p><a href="privacy.html">Privacy Policy</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  // Dynamic copyright year
+  var yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Mobile nav toggle
+  var toggle = document.getElementById('navToggle');
+  var navList = document.getElementById('navList');
+
+  if (toggle && navList) {
+    toggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = navList.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Click outside to close
+    document.addEventListener('click', function (e) {
+      if (!navList.contains(e.target) && !toggle.contains(e.target) && navList.classList.contains('is-open')) {
+        navList.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Escape key to close and refocus
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navList.classList.contains('is-open')) {
+        navList.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
+    });
+
+    // Close on nav link click (mobile UX)
+    navList.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (window.innerWidth <= 768) {
+          navList.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  }
+
+  // Contact Form Submission via WhatsApp
+  var form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      
+      var name = document.getElementById('name').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var subject = document.getElementById('subject').value;
+      var message = document.getElementById('message').value.trim();
+      
+      if (!name || !message) {
+        alert("Please fill in your name and message.");
+        return;
+      }
+      
+      var waText = "*📩 Mini OpenStax Contact Form*\n\n";
+      waText += "*Name:* " + name + "\n";
+      if (email) waText += "*Email:* " + email + "\n";
+      waText += "*Subject:* " + subject + "\n";
+      waText += "*Message:* " + message + "\n\n";
+      waText += "_Sent from the Mini OpenStax Contact Page._";
+      
+      var waNumber = "233257320201";
+      var waUrl = "https://wa.me/" + waNumber + "?text=" + encodeURIComponent(waText);
+      
+      window.open(waUrl, '_blank');
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
